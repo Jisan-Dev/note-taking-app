@@ -1,0 +1,257 @@
+/* #root {
+  margin: 0 ;
+  padding: 0;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: rgb(62, 11, 66);
+}
+
+.app {
+  max-width: 1280px;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.app form p {
+  color: rgb(139, 27, 27);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+.navbar {
+  display: flex;
+  width: 100vw;
+  height: 80px;
+  background-color: slateblue;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.navbar .links {
+  margin-right: 50px;
+  /* text-align: center; */
+}
+
+.links a {
+  color: white;
+  margin: 10px;
+  text-decoration: none;
+  border-bottom: 3px solid white;
+  padding-bottom: 10px;
+}
+
+.navbar .user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 30px;
+}
+
+.user p {
+  font-size: 20px;
+  color: white;
+  margin-right: 18px;
+}
+
+.user img {
+  border-radius: 50%;
+}
+
+.user button {
+  margin-left: 10px;
+  padding: 12px;
+  background: purple;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.userLoginPage {
+  text-align: center;
+}
+
+.userLoginPage p {
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  margin-bottom: 18px;
+  margin-top: 18px;
+}
+
+.userLoginPage button {
+  margin-left: 10px;
+  padding: 12px;
+  background: purple;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+/* create post page */
+.formDiv {
+  background: slateblue;
+  width: 40%;
+  margin-top: 80px;
+  /* height: 360px; */
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 5px;
+}
+
+.formDiv form input::placeholder,
+.formDiv form textarea::placeholder {
+  text-align: center;
+}
+
+.formDiv form .titleInput {
+  width: 78.5%;
+  height: 35px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: none;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: large;
+  background-color: rgb(201, 143, 255);
+}
+
+.formDiv form .descriptionInput {
+  border-radius: 6px;
+  border: none;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: large;
+  background-color: rgb(201, 143, 255);
+}
+
+.formDiv form .btnSubmit {
+  padding: 16px 35px;
+  background: purple;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: large;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+
+
+
+
+.title {
+  margin: 10px 0 5px;
+  font-size: 25px;
+}
+
+.body {
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+#post {
+  width: 70%;
+  /* border: 1px solid black; */
+  border-radius: 10px;
+  margin: 50px auto;
+  padding-bottom: 5px;
+  background-color: rgb(191, 185, 233);
+  box-shadow: 5px 5px 30px 10px rgb(186, 117, 250);
+}
+
+.footer p:nth-child(1) {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.footer button {
+  font-size: large;
+  padding: 3px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.logo {
+  position: absolute;
+  left: 20px;
+  top: 25px;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+
+.bar {
+  display: block;
+  background-color: aliceblue;
+  height: 3px;
+  width: 25px;
+  margin: 5px 25px 5px auto;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+
+
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .links {
+    position: fixed;
+    left: -100%;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    background-color: slateblue;
+    transition: 0.3s;
+  }
+
+  .links.active {
+    left: -0%;
+  }
+
+  .formDiv {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .formDiv textarea {
+    width: 100%;
+  }
+
+  .formDiv form .titleInput {
+    width: 100%;
+  }
+
+  #post {
+    width: 100%;
+  }
+}
