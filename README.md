@@ -1,1 +1,1 @@
-# Social Blogs
+# Note Taking App
